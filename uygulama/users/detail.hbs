@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="/">Listeye Dön</a> <br>
+<ul>
+<li>İD: {{row.id}}</li>
+<li>AD: {{row.name}}</li>
+<li>YAS: {{row.age}}</li>
+</ul>
+
+<a href="/user/detail/update/{{row.id}}"> Güncelle </a> <br> <br>
+
+<form action="/user/detail/{{row.id}}" method="post">
+
+<button type="submit">Sil</button>
+
+</form>
+    
+</body>
+</html>

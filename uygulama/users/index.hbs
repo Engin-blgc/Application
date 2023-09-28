@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<ul>
+    <li> <h3>Kullanicilar</h1></li>
+    {{#each rows}}
+    <li>
+    {{this.name}} / <a href="/user/detail/{{this.id}}">Profile Git</a>  <br>
+    </li>
+    {{/each}}
+</ul>
+<br>
+<a href="/user/create">Kullanici Ekle</a>
+
+</body>
+</html>

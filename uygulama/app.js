@@ -62,7 +62,7 @@ app.post('/user/create', (req, res) => {
     }else{
           db.run(`INSERT INTO users (name, age) VALUES (?, ?)`, [name, age], (err) => {
             if (err) {
-                console.error(err.message);
+                res.status(500).send('İstek gerçekleştirilirken hata oluştu');
             }     
           });
           res.redirect('/');
@@ -86,7 +86,7 @@ app.post('/user/detail/update/:id',(req,res)=>{
     }else{
       db.run('UPDATE users SET name = ?, age = ? WHERE id = ?', [name, age, selectId], (err)=> {
           if (err) {
-            console.error(err.message);
+            res.status(500).send('İstek gerçekleştirilirken hata oluştu');
           }
             });
             res.redirect('/'); 
